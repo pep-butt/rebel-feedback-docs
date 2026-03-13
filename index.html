@@ -5,32 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Feedback on Rebel vs OpenClaw</title>
   <style>
-    body { font-family: Inter, system-ui, sans-serif; margin: 0; background: #f7f5f1; color: #1f1f1f; }
-    .wrap { max-width: 900px; margin: 0 auto; padding: 48px 20px 80px; }
-    .card { background: white; border: 1px solid #ddd5c8; border-radius: 20px; padding: 28px; box-shadow: 0 8px 24px rgba(0,0,0,.04); }
+    body { font-family: Inter, system-ui, sans-serif; margin: 0; background: #f7f5f1; color: #1f1f1f; line-height: 1.65; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 44px 20px 80px; }
+    .card { background: white; border: 1px solid #ddd5c8; border-radius: 22px; padding: 28px; box-shadow: 0 8px 24px rgba(0,0,0,.04); }
     .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: 12px; font-weight: 800; color: #5b46ff; margin-bottom: 12px; }
-    h1 { font-size: 42px; line-height: 1.08; margin: 0 0 16px; }
-    p { line-height: 1.65; }
-    ul { line-height: 1.7; }
+    h1 { font-size: 42px; line-height: 1.08; margin: 0 0 14px; }
+    h2 { font-size: 28px; margin: 30px 0 14px; }
+    h3 { font-size: 20px; margin: 22px 0 10px; }
+    p, li { font-size: 16px; }
+    ul { padding-left: 22px; }
     .muted { color: #666155; }
+    .callout { border-left: 4px solid #5b46ff; background: #f7f3ff; padding: 14px 16px; border-radius: 0 14px 14px 0; margin: 18px 0; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 18px; }
+    .panel { border: 1px solid #ddd5c8; background: #fcfbf9; border-radius: 16px; padding: 18px; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="card">
-      <div class="eyebrow">Working Draft</div>
+      <div class="eyebrow">Working draft</div>
       <h1>Feedback on Rebel vs OpenClaw</h1>
-      <p>This is a live working draft for Lizzie Lawley’s feedback on Rebel as an MCP-enhanced workflow system, compared with OpenClaw.</p>
-      <p class="muted">Initial structure to build out:</p>
+      <p>This document scopes Lizzie Lawley’s current working feedback on Rebel, especially in comparison with OpenClaw as a practical AI operating environment.</p>
+
+      <div class="callout">
+        <strong>Core direction:</strong> this should not become a generic feature comparison. The useful version is a grounded document about how these systems feel in real use, where OpenClaw creates leverage, and where Rebel currently feels weaker or less aligned with the way Lizzie actually wants to work.
+      </div>
+
+      <h2>Current spine of the document</h2>
+      <ol>
+        <li>What matters most in actual use</li>
+        <li>Where OpenClaw feels meaningfully better than Rebel</li>
+        <li>Why those differences matter in practice</li>
+        <li>Where Rebel feels slower, stiffer, or less controllable</li>
+        <li>What this suggests about good AI operating systems</li>
+      </ol>
+
+      <h2>Main points to build out</h2>
+
+      <h3>1. Cross-channel access matters enormously</h3>
+      <p>One of the strongest advantages is that OpenClaw can be reached through Telegram, WhatsApp, and Slack. That makes it dramatically more useful on the go and much more embedded in real life and real work. This is not a minor convenience feature. It changes the frequency and immediacy of use.</p>
+      <p class="muted">Angle to develop: why ambient access changes workflow, responsiveness, and usefulness.</p>
+
+      <h3>2. Specialised agents feel better than a single generalist</h3>
+      <p>A major strength is being able to define agents with different roles, abilities, and working styles. For example:</p>
       <ul>
-        <li>What Rebel is and where it feels strong</li>
-        <li>Where Rebel differs from OpenClaw</li>
-        <li>MCP ergonomics and workflow implications</li>
-        <li>What works better in practice</li>
-        <li>What is missing or frustrating</li>
-        <li>Recommendations / conclusions</li>
+        <li>an organiser / planning agent that understands how Lizzie works and writes PRDs accordingly</li>
+        <li>a coding agent that uses code tools, GitHub, and implementation-specific workflows</li>
+        <li>an email-capable agent with a narrower communication role</li>
       </ul>
-      <p class="muted">This page is intentionally minimal for now so we can start adding real content.</p>
+      <p>The important point here is not just “multiple agents exist.” It is that specialisation creates better fit, better boundaries, and better quality.</p>
+
+      <h3>3. Multi-agent chaining and inter-agent communication create leverage</h3>
+      <p>OpenClaw supports the idea of agents talking to each other in a controlled way. That allows one agent to coordinate, another to execute, and another to provide domain-specific judgment. That feels substantially more powerful than a single-agent model.</p>
+      <p class="muted">Angle to develop: why controlled multi-agent hooks can produce better answers, better delegation, and better architecture for real workflows — as long as costs and loops are managed.</p>
+
+      <h3>4. Agent identities and accounts create better control</h3>
+      <p>Being able to give agents their own accounts, credentials, and operating identities changes the level of control and observability. It becomes easier to manage output, measure actions, understand what happened, and let agents operate in bounded but real ways.</p>
+      <p class="muted">Angle to develop: the difference between “one assistant pretending” and “multiple real operators with scoped identities.”</p>
+
+      <h3>5. Rebel feels slower under large context load</h3>
+      <p>One of the practical drawbacks is that Rebel appears to slow down as context grows. Large context windows may preserve information, but they can also make the system feel heavy, delayed, and less responsive in actual use.</p>
+      <p class="muted">Angle to develop: why context management matters more than raw context size.</p>
+
+      <h3>6. Rebel’s personality / tone feels too assistant-like</h3>
+      <p>Even when Rebel is high quality, it can feel too much like an assistant and not enough like something vivid, flexible, or lifelike. Attempts to soften or shape the personality have not fully solved this. That matters because tone affects trust, energy, and how much the system actually feels usable over time.</p>
+      <p class="muted">Angle to develop: why tone is not cosmetic — it changes whether the system feels usable, alive, and aligned.</p>
+
+      <h3>7. Scheduled / recurring work is a major practical differentiator</h3>
+      <p>OpenClaw can be asked to do recurring work like daily briefings, checking boards, checking Trello, or other routine reviews. That matters a lot because useful AI systems should not only answer when asked; they should also support lightweight ongoing operational rhythms.</p>
+      <p class="muted">Angle to develop: the importance of cron / heartbeat / scheduled work in turning an assistant into an operating layer.</p>
+
+      <h3>8. Humanness of response matters</h3>
+      <p>There is a qualitative difference in how OpenClaw tends to answer. Even when Rebel produces high-quality output, it can become wordy or miss the mark in tone. OpenClaw seems better able to answer in a way that feels more human, more self-correcting, and more naturally aligned with how Lizzie wants to interact.</p>
+      <p class="muted">Angle to develop: why quality is not just correctness — it is also fit, timing, tone, and self-correction.</p>
+
+      <h2>Draft framing options</h2>
+      <div class="grid">
+        <div class="panel">
+          <strong>Option A</strong><br>
+          Why OpenClaw feels more usable than Rebel in real life
+        </div>
+        <div class="panel">
+          <strong>Option B</strong><br>
+          What OpenClaw gets right about AI workflow orchestration that Rebel currently misses
+        </div>
+        <div class="panel">
+          <strong>Option C</strong><br>
+          Rebel vs OpenClaw: a practical comparison from the perspective of lived use
+        </div>
+      </div>
+
+      <h2>What still needs expanding</h2>
+      <ul>
+        <li>more examples for each point</li>
+        <li>clearer explanation of why these differences matter operationally</li>
+        <li>whether Rebel has any countervailing strengths worth noting fairly</li>
+        <li>whether this should be framed as feedback, critique, or comparison memo</li>
+      </ul>
+
+      <p class="muted">This is now scoped enough to start turning into a proper public document instead of a pile of raw notes.</p>
     </div>
   </div>
 </body>
